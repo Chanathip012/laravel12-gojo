@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-    <h2>Gallery of ชนาธิป ปัญโย 68122420012</h2>
+    <h2>Gallery of Anuwat 68122420012</h2>
     ant
     <a href="/gallery/ant"><img src="{{$ant}}" width="300" height="200" >
 </a>
