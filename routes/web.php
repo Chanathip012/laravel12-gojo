@@ -3,7 +3,6 @@
 use App\Http\Controllers\LicenseController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VehicleController;
-
 use App\Http\Controllers\WeightController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -12,11 +11,11 @@ Route::resource('license', LicenseController::class);
 Route::resource('user', UserController::class);
 Route::resource('vehicle', VehicleController::class);
 
-
-
 // 1. กำหนดหน้าแรกให้แสดงผลจาก WeightController
 Route::get('/', [WeightController::class, 'index']);
-Route::resource('weights', WeightController::class)->except(['index', 'create', 'edit']);
+
+// เอา 'index' ออกจาก except เพื่อให้เข้า URL /weights แบบ GET ได้
+Route::resource('weights', WeightController::class)->except(['create', 'edit']);
 
 // 2. Route Dashboard และ Profile
 Route::get('/dashboard', function () {
